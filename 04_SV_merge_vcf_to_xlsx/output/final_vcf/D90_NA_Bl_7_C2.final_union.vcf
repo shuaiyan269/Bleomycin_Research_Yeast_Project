@@ -1,0 +1,68 @@
+##fileformat=VCFv4.1
+##fileDate=20260511
+##source=GenerateSVCandidates 1.6.0
+##reference=file:///public/shuaiyan/projects/Varathon/project_single_clone/03.Short_Read_SV_Calling/batch_NA/D90_NA_Bl_7_C2/ref.genome.fa
+##contig=<ID=chrI,length=237661>
+##contig=<ID=chrII,length=808481>
+##contig=<ID=chrIII,length=319304>
+##contig=<ID=chrIV,length=1495051>
+##contig=<ID=chrV,length=575962>
+##contig=<ID=chrVI,length=289276>
+##contig=<ID=chrVII,length=1082279>
+##contig=<ID=chrVIII,length=543240>
+##contig=<ID=chrIX,length=440919>
+##contig=<ID=chrX,length=723414>
+##contig=<ID=chrXI,length=667446>
+##contig=<ID=chrXII,length=1027157>
+##contig=<ID=chrXIII,length=928527>
+##contig=<ID=chrXIV,length=766731>
+##contig=<ID=chrXV,length=1072763>
+##contig=<ID=chrXVI,length=932263>
+##contig=<ID=chrMT,length=77479>
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the variant described in this record">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END">
+##INFO=<ID=CIGAR,Number=A,Type=String,Description="CIGAR alignment for each alternate indel allele">
+##INFO=<ID=MATEID,Number=.,Type=String,Description="ID of mate breakend">
+##INFO=<ID=EVENT,Number=1,Type=String,Description="ID of event associated to breakend">
+##INFO=<ID=HOMLEN,Number=.,Type=Integer,Description="Length of base pair identical homology at event breakpoints">
+##INFO=<ID=HOMSEQ,Number=.,Type=String,Description="Sequence of base pair identical homology at event breakpoints">
+##INFO=<ID=SVINSLEN,Number=.,Type=Integer,Description="Length of insertion">
+##INFO=<ID=SVINSSEQ,Number=.,Type=String,Description="Sequence of insertion">
+##INFO=<ID=LEFT_SVINSSEQ,Number=.,Type=String,Description="Known left side of insertion for an insertion of unknown length">
+##INFO=<ID=RIGHT_SVINSSEQ,Number=.,Type=String,Description="Known right side of insertion for an insertion of unknown length">
+##INFO=<ID=BND_DEPTH,Number=1,Type=Integer,Description="Read depth at local translocation breakend">
+##INFO=<ID=MATE_BND_DEPTH,Number=1,Type=Integer,Description="Read depth at remote translocation mate breakend">
+##INFO=<ID=JUNCTION_QUAL,Number=1,Type=Integer,Description="If the SV junction is part of an EVENT (ie. a multi-adjacency variant), this field provides the QUAL value for the adjacency in question only">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=FT,Number=1,Type=String,Description="Sample filter, 'PASS' indicates that all filters have passed for this sample">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=PR,Number=.,Type=Integer,Description="Spanning paired-read support for the ref and alt alleles in the order listed">
+##FORMAT=<ID=SR,Number=.,Type=Integer,Description="Split reads for the ref and alt alleles in the order listed, for reads where P(allele|read)>0.999">
+##FILTER=<ID=Ploidy,Description="For DEL & DUP variants, the genotypes of overlapping variants (with similar size) are inconsistent with diploid expectation">
+##FILTER=<ID=MaxDepth,Description="Depth is greater than 3x the median chromosome depth near one or both variant breakends">
+##FILTER=<ID=MaxMQ0Frac,Description="For a small variant (<1000 bases), the fraction of reads in all samples with MAPQ0 around either breakend exceeds 0.4">
+##FILTER=<ID=NoPairSupport,Description="For variants significantly larger than the paired read fragment size, no paired reads support the alternate allele in any sample.">
+##FILTER=<ID=MinQUAL,Description="QUAL score is less than 20">
+##FILTER=<ID=SampleFT,Description="No sample passes all the sample-level filters (at the field FORMAT/FT)">
+##FILTER=<ID=MinGQ,Description="GQ score is less than 15 (filter applied at sample level)">
+##FILTER=<ID=HomRef,Description="homozygous reference call (filter applied at sample level)">
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=DUP:TANDEM,Description="Tandem Duplication">
+##cmdline=/public/shuaiyan/projects/Varathon/build/manta-1.6.0.centos6_x86_64/bin/configManta.py --bam D90_NA_Bl_7_C2.filtered.bam --referenceFasta ref.genome.fa --runDir D90_NA_Bl_7_C2_manta_out
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	D90_NA_Bl_7_C2
+chrIII	11559	DEL00000000	A	<DEL>	296	PASS	METHOD=Delly_only;IMPRECISE;SVTYPE=DEL;SVMETHOD=EMBL.DELLYv1.1.6;END=202746;PE=5;MAPQ=60;CT=3to5;CIPOS=-86,86;CIEND=-86,86	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-8.02377,-460.895:80:PASS:4229:92926:49510:3:120:5:0:0
+chrIV	386488	DEL00000002	G	<DEL>	1019	PASS	METHOD=Delly_only;PRECISE;SVTYPE=DEL;SVMETHOD=EMBL.DELLYv1.1.6;END=386525;PE=0;MAPQ=0;CT=3to5;CIPOS=-22,22;CIEND=-22,22;SRMAPQ=53;INSLEN=0;HOMLEN=23;SR=20;SRQ=1;CONSENSUS=AGCTAGTTAGATCAGCTGAACTTGAACTGACTACGGAAGTAGTTGGATCAACAGAAGTAGTTTGAACGGTCGAGGTAGTTGGGTCAACTGAAGTAGTTGGATCAACAGAAGTAGTTTGAACGGTCGAGGTAGTTGGATCAGCTGAAGTAGTTTGAACGGTCGAGGTAGTTGAGTCAACTGAAGTAGCCACGTCACTTGAGCTAGTTGGATCTGTTGATGTGG;CE=1.93933	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-246.288,0,-122.789:10000:PASS:2114:2799:2086:1:0:0:40:71
+chrXIII	909570	MantaBND:160:0:1:0:0:0:0	C	]chrXIV:756735]C	999	PASS	METHOD=Manta_only;SVTYPE=BND;MATEID=MantaBND:160:0:1:0:0:0:1;CIPOS=0,18;HOMLEN=18;HOMSEQ=TCGGAGCTATGAAGATCG;BND_DEPTH=261;MATE_BND_DEPTH=175	GT:FT:GQ:PL:PR:SR	0/1:PASS:999:999,0,999:88,27:211,59
+chrXIV	554859	MantaBND:178:0:1:0:0:0:1	T	T]chrXIV:582332]	322	PASS	METHOD=Manta_only;SVTYPE=BND;MATEID=MantaBND:178:0:1:0:0:0:0;IMPRECISE;CIPOS=-191,192;BND_DEPTH=172;MATE_BND_DEPTH=215	GT:FT:GQ:PL:PR	0/1:PASS:322:372,0,999:148,41
+chrXIV	554939	INV00000039	C	<INV>	2384	PASS	METHOD=Delly_only;IMPRECISE;SVTYPE=INV;SVMETHOD=EMBL.DELLYv1.1.6;END=582407;PE=42;MAPQ=60;CT=3to3;CIPOS=-99,99;CIEND=-99,99	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-198.664,0,-493.064:10000:PASS:6548:13565:6680:2:90:42:0:0
+chrXIV	556475	INV00000040	C	<INV>	934	PASS	METHOD=Delly_only;IMPRECISE;SVTYPE=INV;SVMETHOD=EMBL.DELLYv1.1.6;END=580640;PE=17;MAPQ=59;CT=5to5;CIPOS=-138,138;CIEND=-138,138	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-57.8796,0,-497.379:10000:PASS:5344:12106:6074:2:101:17:0:0
+chrXIV	582332	MantaBND:178:0:1:0:0:0:0	C	C]chrXIV:554859]	322	PASS	METHOD=Manta_only;SVTYPE=BND;MATEID=MantaBND:178:0:1:0:0:0:1;IMPRECISE;CIPOS=-170,170;BND_DEPTH=215;MATE_BND_DEPTH=172	GT:FT:GQ:PL:PR	0/1:PASS:322:372,0,999:148,41
+chrXIV	756735	MantaBND:160:0:1:0:0:0:1	T	T[chrXIII:909570[	999	PASS	METHOD=Both;SVTYPE=BND;MATEID=MantaBND:160:0:1:0:0:0:0;CIPOS=0,18;HOMLEN=18;HOMSEQ=CTCGGAGCTATGAAGATC;BND_DEPTH=175;MATE_BND_DEPTH=261	GT:FT:GQ:PL:PR:SR	0/1:PASS:999:999,0,999:88,27:211,59
+chrXIV	758652	BND00000042	G	G]chrV:20114]	242	PASS	METHOD=Delly_only;IMPRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=758653;CHR2=chrV;POS2=20114;PE=5;MAPQ=46;CT=3to3;CIPOS=-507,507;CIEND=-507,507	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-19.7489,-736.399:10000:PASS:82131:196915:114784:2:141:5:0:0
+chrXV	110	DEL00000044	A	<DEL>	360	PASS	METHOD=Delly_only;PRECISE;SVTYPE=DEL;SVMETHOD=EMBL.DELLYv1.1.6;END=185;PE=0;MAPQ=0;CT=3to5;CIPOS=-22,22;CIEND=-22,22;SRMAPQ=60;INSLEN=0;HOMLEN=22;SR=6;SRQ=0.97006;CONSENSUS=ACACCACACCCACACACCCACACCCACACACCCACACCACACCACACCCACACCCACACCACACCCACACACCACCCACACACCACACCCACACACACCCACACACTACTCTAACACTACCCTAATCTAACCCTGATCAACCTGTCCCCCAACTTACCCTCC;CE=1.38005	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	1/1:-96.8982,-7.52399,0:75:PASS:0:27:1306:0:0:0:0:25

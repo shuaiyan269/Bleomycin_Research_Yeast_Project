@@ -1,0 +1,19 @@
+WARNING: Setting offline mode. To create database connection use either --database or --cache.
+WARNING: Ignoring 'X_element' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY1/TY2_soloLTR' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'centromere' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY1' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY3_soloLTR' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'Y_prime_element' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY2' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY4_soloLTR' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY5' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY5_soloLTR' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY1_truncated' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'X_element_partial' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY3' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'TY4' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'rnl' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'rnpB' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'rns' feature_type from ./../input/gff/BY.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: No exons found for protein_coding transcript VAR1.t01

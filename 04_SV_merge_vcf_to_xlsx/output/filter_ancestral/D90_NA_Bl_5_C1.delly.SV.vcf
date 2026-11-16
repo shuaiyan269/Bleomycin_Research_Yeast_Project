@@ -1,0 +1,66 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20260511
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=BND,Description="Translocation">
+##ALT=<ID=INS,Description="Insertion">
+##FILTER=<ID=LowQual,Description="Poor quality and insufficient number of PEs and SRs.">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="PE confidence interval around END">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="PE confidence interval around POS">
+##INFO=<ID=CHR2,Number=1,Type=String,Description="Chromosome for POS2 coordinate in case of an inter-chromosomal translocation">
+##INFO=<ID=POS2,Number=1,Type=Integer,Description="Genomic position for CHR2 in case of an inter-chromosomal translocation">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=PE,Number=1,Type=Integer,Description="Paired-end support of the structural variant">
+##INFO=<ID=MAPQ,Number=1,Type=Integer,Description="Median mapping quality of paired-ends">
+##INFO=<ID=SRMAPQ,Number=1,Type=Integer,Description="Median mapping quality of split-reads">
+##INFO=<ID=SR,Number=1,Type=Integer,Description="Split-read support">
+##INFO=<ID=SRQ,Number=1,Type=Float,Description="Split-read consensus alignment quality">
+##INFO=<ID=CONSENSUS,Number=1,Type=String,Description="Split-read consensus sequence">
+##INFO=<ID=CE,Number=1,Type=Float,Description="Consensus sequence entropy">
+##INFO=<ID=CT,Number=1,Type=String,Description="Paired-end signature induced connection type">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Insertion length for SVTYPE=INS.">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=PRECISE,Number=0,Type=Flag,Description="Precise structural variation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVMETHOD,Number=1,Type=String,Description="Type of approach used to detect SV">
+##INFO=<ID=INSLEN,Number=1,Type=Integer,Description="Predicted length of the insertion">
+##INFO=<ID=HOMLEN,Number=1,Type=Integer,Description="Predicted microhomology length using a max. edit distance of 2">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GL,Number=G,Type=Float,Description="Log10-scaled genotype likelihoods for RR,RA,AA genotypes">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=FT,Number=1,Type=String,Description="Per-sample genotype filter">
+##FORMAT=<ID=RC,Number=1,Type=Integer,Description="Raw high-quality read counts or base counts for the SV">
+##FORMAT=<ID=RCL,Number=1,Type=Integer,Description="Raw high-quality read counts or base counts for the left control region">
+##FORMAT=<ID=RCR,Number=1,Type=Integer,Description="Raw high-quality read counts or base counts for the right control region">
+##FORMAT=<ID=RDCN,Number=1,Type=Integer,Description="Read-depth based copy-number estimate for autosomal sites">
+##FORMAT=<ID=DR,Number=1,Type=Integer,Description="# high-quality reference pairs">
+##FORMAT=<ID=DV,Number=1,Type=Integer,Description="# high-quality variant pairs">
+##FORMAT=<ID=RR,Number=1,Type=Integer,Description="# high-quality reference junction reads">
+##FORMAT=<ID=RV,Number=1,Type=Integer,Description="# high-quality variant junction reads">
+##reference=ref.genome.fa
+##contig=<ID=chrI,length=237661>
+##contig=<ID=chrII,length=808481>
+##contig=<ID=chrIII,length=319304>
+##contig=<ID=chrIV,length=1495051>
+##contig=<ID=chrV,length=575962>
+##contig=<ID=chrVI,length=289276>
+##contig=<ID=chrVII,length=1082279>
+##contig=<ID=chrVIII,length=543240>
+##contig=<ID=chrIX,length=440919>
+##contig=<ID=chrX,length=723414>
+##contig=<ID=chrXI,length=667446>
+##contig=<ID=chrXII,length=1027157>
+##contig=<ID=chrXIII,length=928527>
+##contig=<ID=chrXIV,length=766731>
+##contig=<ID=chrXV,length=1072763>
+##contig=<ID=chrXVI,length=932263>
+##contig=<ID=chrMT,length=77479>
+##bcftools_viewVersion=1.17+htslib-1.17
+##bcftools_viewCommand=view D90_NA_Bl_5_C1.delly.SV.bcf; Date=Mon May 11 09:49:20 2026
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	D90_NA_Bl_5_C1
+chrIII	11565	DEL00000001	T	<DEL>	360	PASS	IMPRECISE;SVTYPE=DEL;SVMETHOD=EMBL.DELLYv1.1.6;END=202751;PE=6;MAPQ=60;CT=3to5;CIPOS=-96,96;CIEND=-96,96	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-2.82784,-467.895:28:PASS:3800:99576:53052:4:123:6:0:0
+chrVI	157	BND00000006	C	C]chrIV:1495051]	255	PASS	PRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=158;CHR2=chrIV;POS2=1495050;PE=0;MAPQ=0;CT=3to3;CIPOS=-15,15;CIEND=-15,15;SRMAPQ=53;INSLEN=0;HOMLEN=14;SR=5;SRQ=0.987097;CONSENSUS=ACACCCACACCACACCCACACACACCACACCCACACACCACACCCACACACCACACCCACACACCCACACACACACCACACCCACACACACCACACCCACACCCACACACACCCACACACACCACACCCACACACACACACACACCCACACAC;CE=0.970181	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	1/1:-185.896,-7.64988,0:76:PASS:3714:56039:52325:2:0:0:2:50
+chrVIII	522255	DUP00000016	A	<DUP>	260	PASS	IMPRECISE;SVTYPE=DUP;SVMETHOD=EMBL.DELLYv1.1.6;END=522554;PE=6;MAPQ=45;CT=5to3;CIPOS=-190,190;CIEND=-190,190	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-11.6274,-608.299:116:PASS:2778:74565:34653:4:119:6:0:0
+chrMT	23960	DEL00000039	T	<DEL>	340	PASS	PRECISE;SVTYPE=DEL;SVMETHOD=EMBL.DELLYv1.1.6;END=24017;PE=0;MAPQ=0;CT=3to5;CIPOS=-58,58;CIEND=-58,58;SRMAPQ=70;INSLEN=0;HOMLEN=57;SR=5;SRQ=1;CONSENSUS=ATTTATTTAATAAATATATATATTAATTATAAAATAATAGTCCGGCCCGCCCCCGCGGGGCGGACCCCGAAGGAGTCCGGCCGAAGGAGTCTGCCCCCCTTTTTATTTAATATTTAAAGAAGGATATATTTATAATTTATCATAATATTATTTAATAAGAAATTATTAATTAATTAA;CE=1.88682	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	1/1:-958.082,-75.2393,0:10000:PASS:10546:12895:4808:2:0:0:0:250

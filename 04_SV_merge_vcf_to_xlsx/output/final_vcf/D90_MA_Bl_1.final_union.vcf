@@ -1,0 +1,59 @@
+##fileformat=VCFv4.1
+##fileDate=20250808
+##source=GenerateSVCandidates 1.6.0
+##reference=file:///public/shuaiyan/projects/Varathon/project_sy/03.Short_Read_SV_Calling/batch_MA/D90_MA_Bl_1/ref.genome.fa
+##contig=<ID=chrI,length=214332>
+##contig=<ID=chrII,length=815151>
+##contig=<ID=chrIII,length=309137>
+##contig=<ID=chrIV,length=1468232>
+##contig=<ID=chrV,length=555692>
+##contig=<ID=chrVI,length=290867>
+##contig=<ID=chrVII,length=632616>
+##contig=<ID=chrVIII,length=738767>
+##contig=<ID=chrIX,length=428968>
+##contig=<ID=chrX,length=1092164>
+##contig=<ID=chrXI,length=792116>
+##contig=<ID=chrXII,length=1010127>
+##contig=<ID=chrXIII,length=662343>
+##contig=<ID=chrXIV,length=765143>
+##contig=<ID=chrXV,length=1062502>
+##contig=<ID=chrXVI,length=909189>
+##contig=<ID=chrMT,length=74179>
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the variant described in this record">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END">
+##INFO=<ID=CIGAR,Number=A,Type=String,Description="CIGAR alignment for each alternate indel allele">
+##INFO=<ID=MATEID,Number=.,Type=String,Description="ID of mate breakend">
+##INFO=<ID=EVENT,Number=1,Type=String,Description="ID of event associated to breakend">
+##INFO=<ID=HOMLEN,Number=.,Type=Integer,Description="Length of base pair identical homology at event breakpoints">
+##INFO=<ID=HOMSEQ,Number=.,Type=String,Description="Sequence of base pair identical homology at event breakpoints">
+##INFO=<ID=SVINSLEN,Number=.,Type=Integer,Description="Length of insertion">
+##INFO=<ID=SVINSSEQ,Number=.,Type=String,Description="Sequence of insertion">
+##INFO=<ID=LEFT_SVINSSEQ,Number=.,Type=String,Description="Known left side of insertion for an insertion of unknown length">
+##INFO=<ID=RIGHT_SVINSSEQ,Number=.,Type=String,Description="Known right side of insertion for an insertion of unknown length">
+##INFO=<ID=BND_DEPTH,Number=1,Type=Integer,Description="Read depth at local translocation breakend">
+##INFO=<ID=MATE_BND_DEPTH,Number=1,Type=Integer,Description="Read depth at remote translocation mate breakend">
+##INFO=<ID=JUNCTION_QUAL,Number=1,Type=Integer,Description="If the SV junction is part of an EVENT (ie. a multi-adjacency variant), this field provides the QUAL value for the adjacency in question only">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=FT,Number=1,Type=String,Description="Sample filter, 'PASS' indicates that all filters have passed for this sample">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=PR,Number=.,Type=Integer,Description="Spanning paired-read support for the ref and alt alleles in the order listed">
+##FORMAT=<ID=SR,Number=.,Type=Integer,Description="Split reads for the ref and alt alleles in the order listed, for reads where P(allele|read)>0.999">
+##FILTER=<ID=Ploidy,Description="For DEL & DUP variants, the genotypes of overlapping variants (with similar size) are inconsistent with diploid expectation">
+##FILTER=<ID=MaxDepth,Description="Depth is greater than 3x the median chromosome depth near one or both variant breakends">
+##FILTER=<ID=MaxMQ0Frac,Description="For a small variant (<1000 bases), the fraction of reads in all samples with MAPQ0 around either breakend exceeds 0.4">
+##FILTER=<ID=NoPairSupport,Description="For variants significantly larger than the paired read fragment size, no paired reads support the alternate allele in any sample.">
+##FILTER=<ID=MinQUAL,Description="QUAL score is less than 20">
+##FILTER=<ID=SampleFT,Description="No sample passes all the sample-level filters (at the field FORMAT/FT)">
+##FILTER=<ID=MinGQ,Description="GQ score is less than 15 (filter applied at sample level)">
+##FILTER=<ID=HomRef,Description="homozygous reference call (filter applied at sample level)">
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=DUP:TANDEM,Description="Tandem Duplication">
+##cmdline=/public/shuaiyan/projects/Varathon/build/manta-1.6.0.centos6_x86_64/bin/configManta.py --bam D90_MA_Bl_1.filtered.bam --referenceFasta ref.genome.fa --runDir D90_MA_Bl_1_manta_out
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	D90_MA_Bl_1
+chrIII	192277	DUP00000001	C	<DUP>	295	PASS	METHOD=Delly_only;IMPRECISE;SVTYPE=DUP;SVMETHOD=EMBL.DELLYv1.1.6;END=286724;PE=5;MAPQ=60;CT=5to3;CIPOS=-177,177;CIEND=-177,177	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-12.6398,-586.496:126:PASS:27875:61281:8757:3:135:5:0:0

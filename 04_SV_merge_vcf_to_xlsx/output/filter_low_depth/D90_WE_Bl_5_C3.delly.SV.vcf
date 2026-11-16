@@ -1,0 +1,69 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20260511
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=BND,Description="Translocation">
+##ALT=<ID=INS,Description="Insertion">
+##FILTER=<ID=LowQual,Description="Poor quality and insufficient number of PEs and SRs.">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="PE confidence interval around END">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="PE confidence interval around POS">
+##INFO=<ID=CHR2,Number=1,Type=String,Description="Chromosome for POS2 coordinate in case of an inter-chromosomal translocation">
+##INFO=<ID=POS2,Number=1,Type=Integer,Description="Genomic position for CHR2 in case of an inter-chromosomal translocation">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=PE,Number=1,Type=Integer,Description="Paired-end support of the structural variant">
+##INFO=<ID=MAPQ,Number=1,Type=Integer,Description="Median mapping quality of paired-ends">
+##INFO=<ID=SRMAPQ,Number=1,Type=Integer,Description="Median mapping quality of split-reads">
+##INFO=<ID=SR,Number=1,Type=Integer,Description="Split-read support">
+##INFO=<ID=SRQ,Number=1,Type=Float,Description="Split-read consensus alignment quality">
+##INFO=<ID=CONSENSUS,Number=1,Type=String,Description="Split-read consensus sequence">
+##INFO=<ID=CE,Number=1,Type=Float,Description="Consensus sequence entropy">
+##INFO=<ID=CT,Number=1,Type=String,Description="Paired-end signature induced connection type">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Insertion length for SVTYPE=INS.">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=PRECISE,Number=0,Type=Flag,Description="Precise structural variation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVMETHOD,Number=1,Type=String,Description="Type of approach used to detect SV">
+##INFO=<ID=INSLEN,Number=1,Type=Integer,Description="Predicted length of the insertion">
+##INFO=<ID=HOMLEN,Number=1,Type=Integer,Description="Predicted microhomology length using a max. edit distance of 2">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GL,Number=G,Type=Float,Description="Log10-scaled genotype likelihoods for RR,RA,AA genotypes">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=FT,Number=1,Type=String,Description="Per-sample genotype filter">
+##FORMAT=<ID=RC,Number=1,Type=Integer,Description="Raw high-quality read counts or base counts for the SV">
+##FORMAT=<ID=RCL,Number=1,Type=Integer,Description="Raw high-quality read counts or base counts for the left control region">
+##FORMAT=<ID=RCR,Number=1,Type=Integer,Description="Raw high-quality read counts or base counts for the right control region">
+##FORMAT=<ID=RDCN,Number=1,Type=Integer,Description="Read-depth based copy-number estimate for autosomal sites">
+##FORMAT=<ID=DR,Number=1,Type=Integer,Description="# high-quality reference pairs">
+##FORMAT=<ID=DV,Number=1,Type=Integer,Description="# high-quality variant pairs">
+##FORMAT=<ID=RR,Number=1,Type=Integer,Description="# high-quality reference junction reads">
+##FORMAT=<ID=RV,Number=1,Type=Integer,Description="# high-quality variant junction reads">
+##reference=ref.genome.fa
+##contig=<ID=chrI,length=215496>
+##contig=<ID=chrII,length=795659>
+##contig=<ID=chrIII,length=327289>
+##contig=<ID=chrIV,length=1488087>
+##contig=<ID=chrV,length=576784>
+##contig=<ID=chrVI,length=257436>
+##contig=<ID=chrVII,length=1070236>
+##contig=<ID=chrVIII,length=533397>
+##contig=<ID=chrIX,length=419821>
+##contig=<ID=chrX,length=730957>
+##contig=<ID=chrXI,length=657417>
+##contig=<ID=chrXII,length=1022186>
+##contig=<ID=chrXIII,length=913017>
+##contig=<ID=chrXIV,length=765110>
+##contig=<ID=chrXV,length=1120088>
+##contig=<ID=chrXVI,length=920208>
+##contig=<ID=chrMT,length=81722>
+##bcftools_viewVersion=1.17+htslib-1.17
+##bcftools_viewCommand=view D90_WE_Bl_5_C3.delly.SV.bcf; Date=Mon May 11 09:52:47 2026
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	D90_WE_Bl_5_C3
+chrIII	199973	DUP00000000	T	<DUP>	414	PASS	IMPRECISE;SVTYPE=DUP;SVMETHOD=EMBL.DELLYv1.1.6;END=293331;PE=8;MAPQ=60;CT=5to3;CIPOS=-50,50;CIEND=-50,50	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-2.54607,-581.796:25:PASS:26651:56759:10082:3:138:8:0:0
+chrVIII	1175	BND00000005	A	A[chrV:6232[	1811	PASS	IMPRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=1176;CHR2=chrV;POS2=6232;PE=34;MAPQ=60;CT=3to5;CIPOS=-391,391;CIEND=-391,391	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-132.935,0,-698.736:10000:PASS:76194:163596:87402:2:126:34:0:0
+chrVIII	1448	BND00000006	T	]chrV:6668]T	2556	PASS	IMPRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=1449;CHR2=chrV;POS2=6668;PE=45;MAPQ=60;CT=5to3;CIPOS=-457,457;CIEND=-457,457	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-186.063,0,-1000:10000:PASS:67691:189813:122122:2:186:45:0:0
+chrXIV	764699	BND00000021	A	]chrXI:657256]A	598	PASS	IMPRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=764700;CHR2=chrXI;POS2=657256;PE=16;MAPQ=37;CT=5to3;CIPOS=-527,527;CIEND=-527,527	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-27.293,0,-338.89:10000:PASS:82503:114745:32242:2:92:16:0:0
+chrXV	8240	BND00000022	A	A[chrIX:1[	3112	PASS	IMPRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=8241;CHR2=chrIX;POS2=1;PE=69;MAPQ=47;CT=3to5;CIPOS=-509,509;CIEND=-509,509	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/1:-275.98,0,-231.582:10000:PASS:106227:151365:45138:2:48:69:0:0
+chrXVI	5842	BND00000028	A	A]chrIX:413540]	157	PASS	IMPRECISE;SVTYPE=BND;SVMETHOD=EMBL.DELLYv1.1.6;END=5843;CHR2=chrIX;POS2=413540;PE=5;MAPQ=31;CT=3to3;CIPOS=-524,524;CIEND=-524,524	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	0/0:0,-52.022,-868.792:10000:PASS:224685:409375:184690:2:220:5:0:0
+chrMT	2	DUP00000031	A	<DUP>	6300	PASS	IMPRECISE;SVTYPE=DUP;SVMETHOD=EMBL.DELLYv1.1.6;END=81721;PE=105;MAPQ=60;CT=5to3;CIPOS=-100,100;CIEND=-100,100	GT:GL:GQ:FT:RCL:RC:RCR:RDCN:DR:DV:RR:RV	./.:0,0,0:0:LowQual:0:171401:0:-1:0:0:0:0
